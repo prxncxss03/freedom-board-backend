@@ -1,6 +1,16 @@
 const express = require('express');
 const Todo = require('../model/todoModel');
 
+function isValidObjectId(id){
+    
+    if(ObjectId.isValid(id)){
+        if((String)(new ObjectId(id)) === id)
+            return true;
+        return false;
+    }
+    return false;
+}
+
 const createMessage = async (req,res) => {
     const { text ,author,color} = req.body;
     const newTodo = new Todo({
