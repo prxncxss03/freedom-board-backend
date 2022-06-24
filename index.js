@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGO_URI,
         //must add in order to not get any error masseges:
         useNewUrlParser: true,
         useUnifiedTopology:true,
-        useCreateIndex: true
+      
     }
     ).then((result) => {
     console.log('Connected to MongoDB');
@@ -26,6 +26,6 @@ mongoose.connect(process.env.MONGO_URI,
 })
 
 app.listen(PORT, () => {
-    console.log(process.env.DATABASE_URL)
+    console.log(process.env.MONGO_URI)
     console.log(`Server is listening on port ${PORT}`);
 })
