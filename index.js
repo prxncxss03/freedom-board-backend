@@ -11,9 +11,13 @@ app.use(express.json());
 const PORT = process.env.PORT || 3001;
 
 
-app.options("*", cors({ origin: 'https://prxncxss03.github.io', optionsSuccessStatus: 200 }));
+let corsOptions = {
+    origin: "https://prxncxss03.github.io",
+    optionsSuccessStatus: 200, // For legacy browser support
+    methods: "GET, PUT, POST, DELETE"
+}
 
-app.use(cors({ origin: "https://prxncxss03.github.io", optionsSuccessStatus: 200 }));
+app.use(cors(corsOptions));
 app.use('/api', todoRoutes);
 
 
