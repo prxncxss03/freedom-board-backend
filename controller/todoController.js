@@ -59,7 +59,7 @@ const getInfo =  (req, res) => {
             }
             );
         }
-        res.status(200).send('theres a prob')
+        
     });
 
 }
