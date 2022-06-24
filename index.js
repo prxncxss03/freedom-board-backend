@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3001;
 
 
 let corsOptions = {
-    origin: ["https://prxncxss03.github.io","https://prxncxss03.github.io/api/","https://prxncxss03.github.io/api/color/"],
+    origin: ["https://prxncxss03.github.io","https://prxncxss03.github.io/api/:id","https://prxncxss03.github.io/api","https://prxncxss03.github.io/api/color/"],
     optionsSuccessStatus: 200, // For legacy browser support
     methods: "GET, PUT, POST, DELETE,OPTIONS",
     
