@@ -9,7 +9,7 @@ const { default: mongoose } = require('mongoose');
 app.use(express.json());
 
 const PORT = process.env.PORT || 3001;
-app.use(cors())
+
 
 app.options("*", cors({ origin: 'https://prxncxss03.github.io', optionsSuccessStatus: 200 }));
 
