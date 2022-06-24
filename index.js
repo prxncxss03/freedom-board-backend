@@ -14,8 +14,8 @@ app.use('/api', todoRoutes);
 mongoose.connect(process.env.DATABASE_URL,
     {
         //must add in order to not get any error masseges:
-        useUnifiedTopology:true,
         useNewUrlParser: true,
+        useUnifiedTopology:true,
         useCreateIndex: true
     }
     ).then((result) => {
