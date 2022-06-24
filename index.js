@@ -9,10 +9,10 @@ const { default: mongoose } = require('mongoose');
 app.use(express.json());
 
 const PORT = process.env.PORT || 3001;
-app.use(cors)
+app.use(cors())
 app.use('/api', todoRoutes);
 app.use('/api/color/', todoRoutes);
-app.use(cors(todoRoutes))
+
 mongoose.connect(process.env.MONGO_URI,
     {
         //must add in order to not get any error masseges:
