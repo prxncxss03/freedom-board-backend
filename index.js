@@ -18,7 +18,7 @@ let corsOptions = {
     
 }
 
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(function (req, res, next) {
 
     res.setHeader('Access-Control-Allow-Origin', 'https://prxncxss03.github.io');
