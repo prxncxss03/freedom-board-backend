@@ -12,9 +12,10 @@ const PORT = process.env.PORT || 3001;
 
 
 let corsOptions = {
-    origin: "https://prxncxss03.github.io",
+    origin: ["https://prxncxss03.github.io","https://prxncxss03.github.io/api/:id","https://prxncxss03.github.io/api/color/:id"],
     optionsSuccessStatus: 200, // For legacy browser support
     methods: "GET, PUT, POST, DELETE,OPTIONS",
+    
 }
 
 app.use(cors(corsOptions));
