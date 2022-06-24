@@ -12,22 +12,22 @@ const PORT = process.env.PORT || 3001;
 
 
 let corsOptions = {
-    origin: ["https://prxncxss03.github.io","https://prxncxss03.github.io/api/:id","https://prxncxss03.github.io/api","https://prxncxss03.github.io/api/color/","https://prxncxss03.github.io/api/color/:id"],
+    origin: _*,
     optionsSuccessStatus: 200, // For legacy browser support
     methods: "GET, PUT, POST, DELETE,OPTIONS",
     
 }
 
 app.use(cors(corsOptions));
-app.use(function (req, res, next) {
+// app.use(function (req, res, next) {
 
-    res.setHeader('Access-Control-Allow-Origin', 'https://prxncxss03.github.io');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    res.setHeader('Access-Control-Allow-Credentials', true);
+//     res.setHeader('Access-Control-Allow-Origin', 'https://prxncxss03.github.io');
+//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+//     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+//     res.setHeader('Access-Control-Allow-Credentials', true);
 
-    next();
-});
+//     next();
+// });
 app.use('/api', todoRoutes);
 
 
