@@ -11,7 +11,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 3001;
 app.use(cors())
 app.use('/api', todoRoutes);
-app.use('/api/color/', todoRoutes);
+
 
 mongoose.connect(process.env.MONGO_URI,
     {
