@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3001;
 
 app.use('/api', todoRoutes);
 
-mongoose.connect(process.env.DATABASE_URL).then((result) => {
+mongoose.connect(process.env.DATABASE_URL,{ useNewUrlParser: true }).then((result) => {
     console.log('Connected to MongoDB');
 }).catch((err) => {
     console.log(err);
