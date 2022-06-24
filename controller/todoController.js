@@ -11,7 +11,10 @@ function isValidObjectId(id){
     }
     return false;
 }
-app.use(cors())
+app.use(cors({
+    origin: 'https://prxncxss03.github.io',
+    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+}))
 
 
 // app.use(function (req, res, next) {

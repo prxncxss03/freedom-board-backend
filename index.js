@@ -11,14 +11,10 @@ app.use(express.json());
 const PORT = process.env.PORT || 3001;
 
 
-let corsOptions = {
-    origin: '*',
-    optionsSuccessStatus: 200, // For legacy browser support
-    methods: "GET, PUT, POST, DELETE,OPTIONS",
-    
-}
-
-app.use(cors(corsOptions));
+app.use(cors({
+    origin: 'https://prxncxss03.github.io',
+    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+}))
 // app.use(function (req, res, next) {
 
 //     res.setHeader('Access-Control-Allow-Origin', 'https://prxncxss03.github.io');
