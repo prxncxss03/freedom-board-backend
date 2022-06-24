@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3001;
 
 app.use('/api', todoRoutes);
 
-mongoose.connect(process.env.DATABASE_URL,
+mongoose.connect(process.env.MONGO_URI,
     {
         //must add in order to not get any error masseges:
         useNewUrlParser: true,
