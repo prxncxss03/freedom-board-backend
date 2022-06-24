@@ -11,12 +11,13 @@ const PORT = process.env.PORT || 3001;
 
 app.use('/api', todoRoutes);
 
-mongoose.connect(process.env.DB_CONNECTION).then((result) => {
+mongoose.connect(process.env.DATABASE_URL).then((result) => {
     console.log('Connected to MongoDB');
 }).catch((err) => {
     console.log(err);
 })
 
 app.listen(PORT, () => {
+    console.log(process.env.DATABASE_URL)
     console.log(`Server is listening on port ${PORT}`);
 })
