@@ -47,7 +47,10 @@ const updateColor =  async (req,res) => {
 const getInfo =  (req, res) => {
     Todo.find({}, (err, todos) => {
         if (err) {
-            console.log(err);
+            res.send(400).json({
+                succes: false,
+                data: 'Bad Request'
+            })
         } else {
             res.status(200).json({
 
