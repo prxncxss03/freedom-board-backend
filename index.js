@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3001;
 
 
 app.use(cors({
-    origin: 'https://prxncxss03.github.io',
+    origin: ['https://prxncxss03.github.io','http://localhost:3000'],
     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 }))
 // app.use(function (req, res, next) {
